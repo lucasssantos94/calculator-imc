@@ -10,7 +10,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "commit": "cz"
+    "commit": "cz",
+    "sass": "sass --watch scss:dist/css",
+    "sass:build": "sass scss:dist/css --style=compressed"
   },
   "keywords": [],
   "author": "",

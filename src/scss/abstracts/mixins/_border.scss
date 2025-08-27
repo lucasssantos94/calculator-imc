@@ -1,0 +1,46 @@
+// @use "../patterns/variables" as vars;
+
+/// Aplica bordas com opções flexíveis de lado e raio
+///
+/// Este mixin permite aplicar bordas específicas ou completas com
+/// cor definida pela variável CSS --border-color, e opcionalmente
+/// adicionar border-radius.
+/// @group utilities
+/// @author Lucas Santos
+/// @since 1.0.0
+///
+/// @param {String | null} $side [null] - Lado específico da borda (top, right, bottom, left)
+/// @param {Boolean | null} $radius [null] - Se deve aplicar border-radius de 1.4rem
+///
+/// @example scss - Uso básico com borda completa
+///   .card {
+///     @include border();
+///   }
+///
+/// @example scss - Borda apenas no topo
+///   .header {
+///     @include border($side: top);
+///   }
+///
+/// @example scss - Borda completa com border-radius
+///   .button {
+///     @include border($radius: true);
+///   }
+///
+/// @example scss - Borda lateral com border-radius
+///   .sidebar {
+///     @include border($side: left, $radius: true);
+///   }
+///
+
+@mixin border($side: null, $radius: null) {
+  @if $side {
+    border-#{$side}: 0.5px solid var(--border-color);
+  } @else {
+    border: 0.5px solid var(--border-color);
+  }
+
+  @if $radius {
+    border-radius: 1.4rem;
+  }
+}

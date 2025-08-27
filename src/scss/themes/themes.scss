@@ -1,22 +1,26 @@
 @use '../abstracts/variables' as vars;
 
-html[data-thme='dark'] {
-  --bg-color1: vars.$dark-bg-color1;
-  --bg-color2: vars.$dark-bg-color2;
-  --bg-color3: vars.$dark-bg-color3;
-  --bg-color4: vars.$dark-bg-color4;
-  --title-color: vars.$dark-title-color;
-  --text-color: vars.$dark-text-color;
-  --border-color: vars.$dark-border-color;
+html[data-theme='dark'] {
+  --icon-theme: url(../../../public/images/light-theme.svg);
+  --brand-color: #{vars.$brand-color};
+  --bg-color1: #{vars.$dark-bg-color1};
+  --bg-color2: #{vars.$dark-bg-color2};
+  --bg-color3: #{vars.$dark-bg-color3};
+  --bg-color4: #{vars.$dark-bg-color4};
+  --title-color: #{vars.$dark-title-color};
+  --text-color: #{vars.$dark-text-color};
+  --border-color: #{vars.$dark-border-color};
 }
 
-html[data-thme='light'] {
-  --bg-color1: vars.$light-bg-color1;
-  --bg-color2: vars.$light-bg-color2;
-  --bg-color3: vars.$light-bg-color3;
-  --bg-color4: vars.$light-bg-color4;
-  --title-color: vars.$light-title-color;
-  --text-color: vars.$light-text-color;
-  --text-light-color: vars.$light-text-light-color;
-  --border-color: vars.$light-border-color;
+html[data-theme='light'] {
+  --icon-theme: url(../../../public/images/dark-theme.svg);
+  --brand-color: #{vars.$brand-color};
+  --bg-color1: #{vars.$light-bg-color1};
+  --bg-color2: #{vars.$light-bg-color2};
+  --bg-color3: #{vars.$light-bg-color3};
+  --bg-color4: #{vars.$light-bg-color4};
+  --title-color: #{vars.$light-title-color};
+  --text-color: #{vars.$light-text-color};
+  --text-light-color: #{vars.$light-text-light-color};
+  --border-color: #{vars.$light-border-color};
 }

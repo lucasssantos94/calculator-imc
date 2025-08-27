@@ -1,0 +1,79 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins/mixins.scss' as mixin;
+
+.header {
+  height: vars.$header-height;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: transparent;
+  transition: backdrop-filter 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+  @include mixin.border($side: bottom);
+  &__container {
+    @include mixin.flex($between: true);
+  }
+  &__logo {
+    @include mixin.flex($align: center, $gap: 0.8rem);
+    color: var(--title-color);
+    &-icon {
+      background-color: var(--brand-color);
+      width: 3.2rem;
+      height: 3.2rem;
+      @include mixin.flex($center: true);
+      border-radius: 0.8rem;
+    }
+    &-text {
+      font-size: 1.6rem;
+    }
+  }
+  &__nav {
+    @include mixin.flex($align: center, $gap: 2.4rem);
+    &-link {
+      font-size: 1.8rem;
+      line-height: 2rem;
+      padding: 1rem;
+      color: var(--title-color);
+      font-weight: 500;
+      transition: all 0.3s;
+      &:hover {
+        color: var(--brand-color);
+      }
+    }
+  }
+
+  &__theme-switch {
+    color: var(--title-color);
+    width: 2.4rem;
+    height: 2.4rem;
+    background: var(--icon-theme) no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    &[data-tooltip] {
+      position: relative;
+      will-change: opacity;
+      &::after {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      &:hover::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: calc(100% + 0.1rem);
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--bg-color1);
+        color: var(--text-color);
+        padding: 0.4rem 0.8rem;
+        border-radius: 0.8rem;
+        font-size: 1.4rem;
+        white-space: nowrap;
+        pointer-events: none;
+        opacity: 1;
+      }
+    }
+  }
+}

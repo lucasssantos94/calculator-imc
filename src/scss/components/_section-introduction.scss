@@ -1,0 +1,12 @@
+.section__introduction {
+  text-align: center;
+  &-title {
+    font-size: 2.4rem;
+  }
+  &-description {
+    margin-top: 0.8rem;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: var(--text-color);
+  }
+}

@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de IMC</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <a href="" class="header_logo">
+          <h4 class="header__logo-text">Calculadora de IMC</h4>
+        </a>
+
+        <nav class="header__nav">
+          <a href="" class="header__nav-link">Calculadora</a>
+          <a href="" class="header__nav-link">Dicas de Saúde</a>
+          <a href="" class="header__nav-link">FAQ</a>
+        </nav>
+      </div>
+
+      <button class="header__theme-switch">Tema</button>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__container container">
+          <h1 class="hero__title">
+            Calcule seu <span class="hero__title--highlight">IMC</span>
+          </h1>
+          <p class="hero__description">
+            Obtenha informações instantâneas sobre seu Índice de Massa Corporal
+            com nossa calculadora moderna e facile de usar. Entenda seu estado
+            de saúde e receba recomendações personalizadas.
+          </p>
+        </div>
+      </section>
+
+      <section class="calculator-section" id="calculator">
+        <div class="calculator__container container">
+          <form
+            name="form_calculator"
+            id="form_calculator"
+            class="calculator__form"
+          >
+            <div class="calculator__logo">
+              <i data-lucide="calculator"></i>
+            </div>
+
+            <h2 class="calculator__title">Calculadora de IMC</h2>
+            <p class="calculator__subtitle">
+              Insira sua altura e peso para calcular seu IMC
+            </p>
+
+            <div class="calculator__input-group">
+              <label for="height" class="calculator__label">
+                <i data-lucide="ruler"></i>
+                Altura (cm)
+              </label>
+              <input
+                type="number"
+                name="height"
+                id="height"
+                class="calculator__input"
+                placeholder="Ex: 170"
+                required
+              />
+            </div>
+
+            <div class="calculator__input-group">
+              <label for="height" class="calculator__label">
+                <i data-lucide="scale"></i>
+                Peso (kg)
+              </label>
+              <input
+                type="number"
+                name="weight"
+                id="weight"
+                class="calculator__input"
+                placeholder="Ex: 70"
+                required
+              />
+            </div>
+
+            <div class="calculator__buttons">
+              <button
+                type="button"
+                id="btn-calculate"
+                class="calculator__button"
+              >
+                Calcular IMC
+              </button>
+
+              <button type="button" id="btn-reset" class="calculator__button">
+                Reiniciar
+              </button>
+            </div>
+          </form>
+
+          <div class="calculator__result">
+            <h3 class="calculator__result-title">Seu resultado de IMC:</h3>
+            <h4 class="calculator__bmi-result" id="bmi-result"></h4>
+            <div class="bmi-badge" id="bmi-badge"></div>
+            <p class="calculator__bmi-description" id="bmi-description"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="table-section">
+        <div class="table-section__container container">
+          <div class="table-section__box">
+            <h2 class="table-section__title">
+              Categorias de IMC e riscos à saúde
+            </h2>
+
+            <p class="table-section__description">
+              Compreendendo as faixas de IMC e suas implicações associadas à
+              saude
+            </p>
+
+            <table class="table-section__table">
+              <thead class="table-section__thead">
+                <tr class="table-section__tr">
+                  <th class="table-section__th">Faixa de IMC</th>
+                  <th class="table-section__th">Categoria</th>
+                  <th class="table-section__th">Risco à saúde</th>
+                </tr>
+              </thead>
+              <tbody class="table-section__tbody">
+                <tr class="table-section__tr">
+                  <td class="table-section__td">Abaixo de 18,5</td>
+                  <td class="table-section__td">
+                    <span class="table-section__badge table-section__badge--1"
+                      >Abaixo do peso</span
+                    >
+                  </td>
+                  <td class="table-section__td">
+                    Aumento do risco de deficiência nutricional e osteoporose.
+                  </td>
+                </tr>
+
+                <tr class="table-section__tr">
+                  <td class="table-section__td">18,5 - 24,9</td>
+                  <td class="table-section__td">
+                    <span class="table-section__badge table-section__badge--2"
+                      >Peso Normal</span
+                    >
+                  </td>
+                  <td class="table-section__td">
+                    Menor risco de problemas de saúde relacionados ao peso.
+                  </td>
+                </tr>
+
+                <tr class="table-section__tr">
+                  <td class="table-section__td">25,0 - 29,9</td>
+                  <td class="table-section__td">
+                    <span class="table-section__badge table-section__badge--3"
+                      >Sobrepeso</span
+                    >
+                  </td>
+                  <td class="table-section__td">
+                    Aumento do risco de doenças cardiovasculares e diabetes.
+                  </td>
+                </tr>
+
+                <tr class="table-section__tr">
+                  <td class="table-section__td">30,0 - 34,9</td>
+                  <td class="table-section__td">
+                    <span class="table-section__badge table-section__badge--4"
+                      >Obeso Classe I</span
+                    >
+                  </td>
+                  <td class="table-section__td">
+                    Alto risco de problemas de saúde relacionados ao peso.
+                  </td>
+                </tr>
+
+                <tr class="table-section__tr">
+                  <td class="table-section__td">35,0 - 39,9</td>
+                  <td class="table-section__td">
+                    <span class="table-section__badge table-section__badge--5"
+                      >Obeso Classe II</span
+                    >
+                  </td>
+                  <td class="table-section__td">
+                    Risco muito alto de problemas de saúde relacionados ao peso.
+                  </td>
+                </tr>
+
+                <tr class="table-section__tr">
+                  <td class="table-section__td">40.0 e acima</td>
+                  <td class="table-section__td">
+                    <span class="table-section__badge table-section__badge--6"
+                      >Obeso Classe III</span
+                    >
+                  </td>
+                  <td class="table-section__td">
+                    Risco extremamente alto de problemas de saúde relacionados
+                    ao peso.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="table-section__info">
+              <p class="table-section__info-text">
+                <strong>Observação:</strong> o IMC é uma ferramenta de triagem e
+                não diagnostica a gordura corporal ou a saúde. Consulte um
+                profissional de saúde para uma avaliação de saúde completa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="health-tips" id="tips">
+        <div class="health-tips__container container">
+          <h2 class="health-tips__title">Dicas de saúde e bem-estar</h2>
+
+          <p class="health-tips__description">
+            Recomendações baseadas em evidências para manter um estilo de vida
+            saudável
+          </p>
+
+          <div class="health-tips__cards">
+            <article class="health-tips__card">
+              <div class="health-tips__card-header">
+                <div class="health-tips__card-title">
+                  <i data-lucide="droplets" class="health-tips__card-icon"></i>
+                  <h3 class="health-tips__card-heading">
+                    Mantenha-se hidratado
+                  </h3>
+                </div>
+
+                <div class="health-tips__card-badge">Hidratação</div>
+              </div>
+              <p class="health-tips__card-description">
+                Beba pelo menos 8 copos de água por dia. A hidratação adequada
+                auxilia o metabolismo e a manter um peso saudável.
+              </p>
+            </article>
+
+            <article class="health-tips__card">
+              <div class="health-tips__card-header">
+                <div class="health-tips__card-title">
+                  <i data-lucide="activity" class="health-tips__card-icon"></i>
+                  <h3 class="health-tips__card-heading">Exercício regular</h3>
+                </div>
+
+                <div class="health-tips__card-badge">Fitness</div>
+              </div>
+              <p class="health-tips__card-description">
+                Tente praticar 150 minutos de atividade aeróbica moderada por
+                semana. Combine exercícios aeróbicos com treino de força para
+                obter os melhores resultados.
+              </p>
+            </article>
+
+            <article class="health-tips__card">
+              <div class="health-tips__card-header">
+                <div class="health-tips__card-title">
+                  <i data-lucide="apple" class="health-tips__card-icon"></i>
+                  <h3 class="health-tips__card-heading">Nutrição balanceada</h3>
+                </div>
+
+                <div class="health-tips__card-badge">Nutrição</div>
+              </div>
+              <p class="health-tips__card-description">
+                Concentre-se em alimentos integrais: frutas, vegetais, proteínas
+                magras e grãos integrais. Limite alimentos processados ​​e
+                açúcares adicionados.
+              </p>
+            </article>
+
+            <article class="health-tips__card">
+              <div class="health-tips__card-header">
+                <div class="health-tips__card-title">
+                  <i data-lucide="heart" class="health-tips__card-icon"></i>
+                  <h3 class="health-tips__card-heading">Saúde do Coração</h3>
+                </div>
+
+                <div class="health-tips__card-badge">Bem-estar</div>
+              </div>
+              <p class="health-tips__card-description">
+                Mantenha um IMC saudável para reduzir os riscos
+                cardiovasculares. Exames e monitoramento regulares são
+                essenciais.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section" id="faq">
+        <div class="faq__container container">
+          <div class="faq__box">
+            <h2 class="faq__title">Perguntas frequentes</h2>
+            <p class="faq__description">
+              Perguntas comuns sobre cálculo e interpretação do IMC
+            </p>
+
+            <div class="faq__accordion">
+              <details class="faq__details">
+                <summary class="faq__summary">
+                  O que é IMC e como ele é calculado?
+                </summary>
+                <p class="faq__content">
+                  O IMC (Índice de Massa Corporal) é uma medida da gordura
+                  corporal baseada na altura e no peso. É calculado dividindo-se
+                  o peso em quilogramas pela altura em metros ao quadrado
+                  (kg/m²). Embora útil como ferramenta de triagem, o IMC não
+                  mede diretamente o percentual de gordura corporal.
+                </p>
+              </details>
+
+              <details class="faq__details">
+                <summary class="faq__summary">
+                  O IMC é preciso para todos?
+                </summary>
+                <p class="faq__content">
+                  O IMC tem limitações e pode não ser preciso para atletas com
+                  alta massa muscular, idosos, gestantes ou crianças. Também não
+                  leva em consideração a densidade óssea, a massa muscular ou a
+                  distribuição de gordura. Consulte profissionais de saúde para
+                  uma avaliação completa.
+                </p>
+              </details>
+
+              <details class="faq__details">
+                <summary class="faq__summary">
+                  O que devo fazer se meu IMC estiver fora da faixa do normal?
+                </summary>
+                <p class="faq__content">
+                  Se o seu IMC indicar baixo peso ou sobrepeso, consulte um
+                  profissional de saúde ou nutricionista. Eles podem ajudar a
+                  criar um plano personalizado, considerando sua saúde geral,
+                  histórico médico e circunstâncias individuais.
+                </p>
+              </details>
+
+              <details class="faq__details">
+                <summary class="faq__summary">
+                  Com que frequencia devo calcular meu IMC?
+                </summary>
+                <p class="faq__content">
+                  Para a maioria dos adultos, verificar o IMC mensal ou
+                  trimestralmente é suficiente. No entanto, concentre-se nos
+                  hábitos gerais de saúde em vez do monitoramento frequente do
+                  IMC. Mudanças sustentáveis ​​no estilo de vida são mais
+                  importantes do que flutuações diárias.
+                </p>
+              </details>
+
+              <details class="faq__details">
+                <summary class="faq__summary">
+                  O IMC pode prever riscos à saúde?
+                </summary>
+                <p class="faq__content">
+                  O IMC pode indicar potenciais riscos à saúde associados ao
+                  peso, mas não é uma ferramenta de diagnóstico. Outros fatores
+                  como circunferência da cintura, pressão arterial, níveis de
+                  colesterol e histórico familiar são igualmente importantes
+                  para avaliar os riscos à saúde.
+                </p>
+              </details>
+
+              <details class="faq__details">
+                <summary class="faq__summary">
+                  Qual a diferença entre IMC e porcentual de gordura corporal?
+                </summary>
+                <p class="faq__content">
+                  O IMC é um cálculo simples baseado na altura e no peso,
+                  enquanto o percentual de gordura corporal mede a proporção
+                  real de gordura no corpo. O percentual de gordura corporal é
+                  mais preciso para avaliar a saúde, mas o IMC é mais fácil de
+                  calcular e amplamente utilizado para triagem.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__logo">
+          <div class="footer__logo-box">
+            <i data-lucide="calculator" class="footer__icon"></i>
+          </div>
+          <h3 class="footer__logo-text">Calculadora de IMC</h3>
+        </div>
+        <p class="footer__copyright">
+          © Todos os direitos reservados -
+          <span id="year" class="footer__year"></span>
+        </p>
+        <p class="footer__disclaimer">
+          Somente para fins educacionais.<br />
+          Consulte profissionais de saúde para obter aconselhamento médico.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="./js/script.js" type="module"></script>
+  </body>
+</html>

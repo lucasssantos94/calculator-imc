@@ -40,7 +40,7 @@
         </div>
       </section>
 
-      <section class="calculator-section" id="calculator">
+      <section class="calculator" id="calculator">
         <div class="calculator__container container">
           <form
             name="form_calculator"
@@ -51,10 +51,12 @@
               <i data-lucide="calculator"></i>
             </div>
 
-            <h2 class="calculator__title">Calculadora de IMC</h2>
-            <p class="calculator__subtitle">
-              Insira sua altura e peso para calcular seu IMC
-            </p>
+            <div class="section__introduction">
+              <h2 class="section__introduction-title">Calculadora de IMC</h2>
+              <p class="section__introduction-description">
+                Calcule seu Índice de Massa Corporal (IMC) e entenda sua saúde
+              </p>
+            </div>
 
             <div class="calculator__input-group">
               <label for="height" class="calculator__label">
@@ -95,7 +97,11 @@
                 Calcular IMC
               </button>
 
-              <button type="button" id="btn-reset" class="calculator__button">
+              <button
+                type="button"
+                id="btn-reset"
+                class="calculator__button btn-reset"
+              >
                 Reiniciar
               </button>
             </div>
@@ -113,14 +119,15 @@
       <section class="table-section">
         <div class="table-section__container container">
           <div class="table-section__box">
-            <h2 class="table-section__title">
-              Categorias de IMC e riscos à saúde
-            </h2>
-
-            <p class="table-section__description">
-              Compreendendo as faixas de IMC e suas implicações associadas à
-              saude
-            </p>
+            <div class="section__introduction">
+              <h2 class="section__introduction-title">
+                Categorias de IMC e riscos à saúde
+              </h2>
+              <p class="section__introduction-description">
+                Compreendendo as faixas de IMC e suas implicações associadas à
+                saude
+              </p>
+            </div>
 
             <table class="table-section__table">
               <thead class="table-section__thead">
@@ -219,78 +226,91 @@
 
       <section class="health-tips" id="tips">
         <div class="health-tips__container container">
-          <h2 class="health-tips__title">Dicas de saúde e bem-estar</h2>
-
-          <p class="health-tips__description">
-            Recomendações baseadas em evidências para manter um estilo de vida
-            saudável
-          </p>
-
-          <div class="health-tips__cards">
-            <article class="health-tips__card">
-              <div class="health-tips__card-header">
-                <div class="health-tips__card-title">
-                  <i data-lucide="droplets" class="health-tips__card-icon"></i>
-                  <h3 class="health-tips__card-heading">
-                    Mantenha-se hidratado
-                  </h3>
-                </div>
-
-                <div class="health-tips__card-badge">Hidratação</div>
-              </div>
-              <p class="health-tips__card-description">
-                Beba pelo menos 8 copos de água por dia. A hidratação adequada
-                auxilia o metabolismo e a manter um peso saudável.
+          <div class="table-section__box">
+            <div class="section__introduction">
+              <h2 class="section__introduction-title">
+                Dicas de saúde e bem-estar
+              </h2>
+              <p class="section__introduction-description">
+                Recomendações baseadas em evidências para manter um estilo de
+                vida saudável
               </p>
-            </article>
+            </div>
 
-            <article class="health-tips__card">
-              <div class="health-tips__card-header">
-                <div class="health-tips__card-title">
-                  <i data-lucide="activity" class="health-tips__card-icon"></i>
-                  <h3 class="health-tips__card-heading">Exercício regular</h3>
+            <div class="health-tips__cards">
+              <article class="health-tips__card">
+                <div class="health-tips__card-header">
+                  <div class="health-tips__card-title">
+                    <i
+                      data-lucide="droplets"
+                      class="health-tips__card-icon"
+                    ></i>
+                    <h3 class="health-tips__card-heading">
+                      Mantenha-se hidratado
+                    </h3>
+                  </div>
+
+                  <div class="health-tips__card-badge">Hidratação</div>
                 </div>
+                <p class="health-tips__card-description">
+                  Beba pelo menos 8 copos de água por dia. A hidratação adequada
+                  auxilia o metabolismo e a manter um peso saudável.
+                </p>
+              </article>
 
-                <div class="health-tips__card-badge">Fitness</div>
-              </div>
-              <p class="health-tips__card-description">
-                Tente praticar 150 minutos de atividade aeróbica moderada por
-                semana. Combine exercícios aeróbicos com treino de força para
-                obter os melhores resultados.
-              </p>
-            </article>
+              <article class="health-tips__card">
+                <div class="health-tips__card-header">
+                  <div class="health-tips__card-title">
+                    <i
+                      data-lucide="activity"
+                      class="health-tips__card-icon"
+                    ></i>
+                    <h3 class="health-tips__card-heading">Exercício regular</h3>
+                  </div>
 
-            <article class="health-tips__card">
-              <div class="health-tips__card-header">
-                <div class="health-tips__card-title">
-                  <i data-lucide="apple" class="health-tips__card-icon"></i>
-                  <h3 class="health-tips__card-heading">Nutrição balanceada</h3>
+                  <div class="health-tips__card-badge">Fitness</div>
                 </div>
+                <p class="health-tips__card-description">
+                  Tente praticar 150 minutos de atividade aeróbica moderada por
+                  semana. Combine exercícios aeróbicos com treino de força para
+                  obter os melhores resultados.
+                </p>
+              </article>
 
-                <div class="health-tips__card-badge">Nutrição</div>
-              </div>
-              <p class="health-tips__card-description">
-                Concentre-se em alimentos integrais: frutas, vegetais, proteínas
-                magras e grãos integrais. Limite alimentos processados ​​e
-                açúcares adicionados.
-              </p>
-            </article>
+              <article class="health-tips__card">
+                <div class="health-tips__card-header">
+                  <div class="health-tips__card-title">
+                    <i data-lucide="apple" class="health-tips__card-icon"></i>
+                    <h3 class="health-tips__card-heading">
+                      Nutrição balanceada
+                    </h3>
+                  </div>
 
-            <article class="health-tips__card">
-              <div class="health-tips__card-header">
-                <div class="health-tips__card-title">
-                  <i data-lucide="heart" class="health-tips__card-icon"></i>
-                  <h3 class="health-tips__card-heading">Saúde do Coração</h3>
+                  <div class="health-tips__card-badge">Nutrição</div>
                 </div>
+                <p class="health-tips__card-description">
+                  Concentre-se em alimentos integrais: frutas, vegetais,
+                  proteínas magras e grãos integrais. Limite alimentos
+                  processados ​​e açúcares adicionados.
+                </p>
+              </article>
 
-                <div class="health-tips__card-badge">Bem-estar</div>
-              </div>
-              <p class="health-tips__card-description">
-                Mantenha um IMC saudável para reduzir os riscos
-                cardiovasculares. Exames e monitoramento regulares são
-                essenciais.
-              </p>
-            </article>
+              <article class="health-tips__card">
+                <div class="health-tips__card-header">
+                  <div class="health-tips__card-title">
+                    <i data-lucide="heart" class="health-tips__card-icon"></i>
+                    <h3 class="health-tips__card-heading">Saúde do Coração</h3>
+                  </div>
+
+                  <div class="health-tips__card-badge">Bem-estar</div>
+                </div>
+                <p class="health-tips__card-description">
+                  Mantenha um IMC saudável para reduzir os riscos
+                  cardiovasculares. Exames e monitoramento regulares são
+                  essenciais.
+                </p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
@@ -298,10 +318,12 @@
       <section class="faq-section" id="faq">
         <div class="faq__container container">
           <div class="faq__box">
-            <h2 class="faq__title">Perguntas frequentes</h2>
-            <p class="faq__description">
-              Perguntas comuns sobre cálculo e interpretação do IMC
-            </p>
+            <div class="section__introduction">
+              <h2 class="section__introduction-title">Perguntas frequentes</h2>
+              <p class="section__introduction-description">
+                Perguntas comuns sobre cálculo e interpretação do IMC
+              </p>
+            </div>
 
             <div class="faq__accordion">
               <details class="faq__details">

@@ -21,3 +21,16 @@ $light-title-color: #1c1c1e;
 $light-text-color: #52525b;
 $light-text-light-color: #fefefe;
 $light-border-color: #d1d5db;
+
+// placeholder
+%title-section {
+  font-size: 2.4rem;
+  text-align: center;
+}
+%description-section {
+  margin-top: 0.8rem;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: var(--text-color);
+  text-align: center;
+}

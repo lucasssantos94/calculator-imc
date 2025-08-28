@@ -7,8 +7,8 @@ export class ThemeManager {
       DARK: 'dark',
     };
     this.tooltips = {
-      [this.themes.LIGHT]: 'Tema Escuro',
-      [this.themes.DARK]: 'Tema Claro',
+      [this.themes.LIGHT]: 'Tema Escuro 🧛🏻‍♂️',
+      [this.themes.DARK]: 'Tema Claro 😎',
     };
   }
 
@@ -17,10 +17,11 @@ export class ThemeManager {
     this.applyTheme(savedTheme);
   }
 
-  toogleTheme() {
+  toggleTheme() {
     const currentTheme = this.getCurrentTheme();
     const newTheme =
       currentTheme === this.themes.LIGHT ? this.themes.DARK : this.themes.LIGHT;
+
     this.applyTheme(newTheme);
   }
 
@@ -41,5 +42,9 @@ export class ThemeManager {
 
   getSavedTheme() {
     return localStorage.getItem('theme') || this.themes.DARK;
+  }
+
+  saveTheme(theme) {
+    localStorage.setItem('theme', theme);
   }
 }

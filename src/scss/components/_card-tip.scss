@@ -1,0 +1,38 @@
+@use '../abstracts/mixins/mixins.scss' as mixin;
+
+.health-tips__card {
+  padding: 2.4rem;
+  border-radius: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  @include mixin.border($radius: true);
+  border-left: 4px solid var(--brand-color);
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    h3 {
+      font-size: 1.8rem;
+      color: var(--title-color);
+    }
+  }
+  &-icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--brand-color);
+  }
+  &-badge {
+    color: var(--title-color);
+    font-size: 1.2rem;
+    padding: 0.2rem 0.8rem;
+    border: 0.5px solid var(--border-color);
+    border-radius: 0.8rem;
+    background-color: var(--bg-color4);
+  }
+}

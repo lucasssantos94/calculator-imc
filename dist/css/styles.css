@@ -151,6 +151,44 @@ label {
   background-color: #f20024;
 }
 
+.health-tips__card {
+  padding: 2.4rem;
+  border-radius: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  border: 0.5px solid var(--border-color);
+  border-radius: 1.4rem;
+  border-left: 4px solid var(--brand-color);
+}
+.health-tips__card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.health-tips__card-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.health-tips__card-title h3 {
+  font-size: 1.8rem;
+  color: var(--title-color);
+}
+.health-tips__card-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--brand-color);
+}
+.health-tips__card-badge {
+  color: var(--title-color);
+  font-size: 1.2rem;
+  padding: 0.2rem 0.8rem;
+  border: 0.5px solid var(--border-color);
+  border-radius: 0.8rem;
+  background-color: var(--bg-color4);
+}
+
 .container {
   width: 100%;
   max-width: 95vw;
@@ -390,6 +428,18 @@ main .container {
   align-items: center;
   border: 0.5px solid var(--border-color);
   border-radius: 1.4rem;
+}
+
+.health-tips {
+  padding: 4.8rem 0;
+}
+.health-tips .health-tips__cards {
+  width: 100%;
+  max-width: 90rem;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
 html[data-theme='dark'] {

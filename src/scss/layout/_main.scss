@@ -1,7 +1,9 @@
 @use '../abstracts/mixins/mixins.scss' as mixin;
+@use '../abstracts/variables' as vars;
 
 main {
   & .container {
     @include mixin.flex($center: true, $direction: column, $gap: 2rem);
+    // padding: vars.$section-padding;
   }
 }

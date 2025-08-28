@@ -24,3 +24,15 @@
     padding: 1.2rem;
   }
 }
+
+.table-section__info {
+  margin-top: 2rem;
+  padding: 1.2rem;
+  border-radius: 1.4rem;
+  background-color: var(--bg-color4);
+  &-text {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-align: left;
+  }
+}

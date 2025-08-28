@@ -113,6 +113,18 @@ label {
   padding: 1.2rem;
 }
 
+.table-section__info {
+  margin-top: 2rem;
+  padding: 1.2rem;
+  border-radius: 1.4rem;
+  background-color: var(--bg-color4);
+}
+.table-section__info-text {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  text-align: left;
+}
+
 .table-section__badge {
   padding: 0.5rem 0.8rem;
   border-radius: 1rem;
@@ -232,16 +244,19 @@ label {
   opacity: 1;
 }
 
+main .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero {
   padding-top: 7.2rem;
 }
 .hero__container {
   padding: 4.8rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   color: var(--title-color);
 }
@@ -263,13 +278,6 @@ label {
 .calculator {
   padding: 4.8rem 0;
   padding-top: 0;
-}
-.calculator__container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
 }
 .calculator__form,
 .calculator__result {
@@ -369,11 +377,6 @@ label {
   background-color: var(--bg-color2);
 }
 .table-section__container {
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   color: var(--title-color);
 }
@@ -395,7 +398,7 @@ html[data-theme='dark'] {
   --bg-color1: #020202;
   --bg-color2: #040404;
   --bg-color3: #060606;
-  --bg-color4: #090909;
+  --bg-color4: #0c140b;
   --title-color: #eeeeee;
   --text-color: #868f8f;
   --border-color: #161616;

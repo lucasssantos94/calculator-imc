@@ -5,7 +5,6 @@
   padding: vars.$section-padding;
   background-color: var(--bg-color2);
   &__container {
-    @include mixin.flex($center: true, $direction: column, $gap: 2.4rem);
     text-align: center;
     color: var(--title-color);
   }

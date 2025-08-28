@@ -5,7 +5,6 @@
   padding-top: vars.$header-height;
   &__container {
     padding: vars.$section-padding;
-    @include mixin.flex($center: true, $direction: column, $gap: 2.4rem);
     text-align: center;
     color: var(--title-color);
   }

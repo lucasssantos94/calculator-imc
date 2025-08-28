@@ -1,0 +1,7 @@
+@use '../abstracts/mixins/mixins.scss' as mixin;
+
+main {
+  & .container {
+    @include mixin.flex($center: true, $direction: column, $gap: 2rem);
+  }
+}

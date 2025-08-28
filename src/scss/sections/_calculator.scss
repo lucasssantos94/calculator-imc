@@ -4,9 +4,7 @@
 .calculator {
   padding: vars.$section-padding;
   padding-top: 0;
-  &__container {
-    @include mixin.flex($center: true, $direction: column, $gap: 2rem);
-  }
+
   &__form,
   &__result {
     width: 100%;

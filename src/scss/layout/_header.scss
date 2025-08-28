@@ -18,7 +18,7 @@
 
   &__nav {
     @include mixin.flex($align: center, $gap: 2.4rem);
-    &-link {
+    &--link {
       font-size: 1.8rem;
       line-height: 2rem;
       padding: 1rem;

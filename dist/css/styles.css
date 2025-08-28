@@ -92,10 +92,10 @@ label {
 .section__introduction {
   text-align: center;
 }
-.section__introduction-title {
+.section__introduction--title {
   font-size: 2.4rem;
 }
-.section__introduction-description {
+.section__introduction--description {
   margin-top: 0.8rem;
   font-size: 1.6rem;
   line-height: 2.8rem;
@@ -278,7 +278,7 @@ label {
   justify-content: flex-start;
   align-items: center;
 }
-.header__nav-link {
+.header__nav--link {
   font-size: 1.8rem;
   line-height: 2rem;
   padding: 1rem;
@@ -286,7 +286,7 @@ label {
   font-weight: 500;
   transition: all 0.3s;
 }
-.header__nav-link:hover {
+.header__nav--link:hover {
   color: var(--brand-color);
 }
 .header__theme-switch {
@@ -440,7 +440,7 @@ main .container {
   font-size: 4.8rem;
   margin: 1rem 0;
 }
-.calculator__result__bmi-description {
+.calculator__result__bmi--description {
   margin-top: 1rem;
   font-size: 1.6rem;
   text-align: center;
@@ -473,7 +473,7 @@ main .container {
 .health-tips {
   padding: 4.8rem 0;
 }
-.health-tips .health-tips__cards {
+.health-tips__cards {
   width: 100%;
   max-width: 90rem;
   margin-top: 2rem;
@@ -505,6 +505,13 @@ main .container {
 }
 .footer__logo h4 {
   font-size: 1.4rem;
+}
+.footer__copyright {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+.footer__disclaimer {
+  font-size: 1.2rem;
 }
 
 html[data-theme='dark'] {

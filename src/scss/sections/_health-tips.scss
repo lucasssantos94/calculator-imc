@@ -2,7 +2,7 @@
 
 .health-tips {
   padding: vars.$section-padding;
-  .health-tips__cards {
+  &__cards {
     width: 100%;
     max-width: 90rem;
     margin-top: 2rem;

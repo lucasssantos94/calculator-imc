@@ -1,0 +1,41 @@
+@use '../abstracts/mixins/mixins.scss' as mixin;
+
+.faq__accordion {
+  margin-top: 2rem;
+  &--details {
+    margin-top: 2rem;
+    color: var(--title-color);
+    &[open] summary {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &--summary {
+    all: unset;
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 1.2rem 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    @include mixin.border($side: bottom);
+    transition: all 0.3s ease;
+    &::after {
+      content: '▼';
+      color: inherit;
+      font-size: 1.4rem;
+      transition: transform 0.3s ease;
+      transform: rotate(0deg);
+    }
+    &:hover {
+      color: var(--brand-color);
+      font-weight: bold;
+    }
+  }
+  &--content {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+  }
+}

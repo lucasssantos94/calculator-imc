@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins/mixins.scss' as mixin;
+
+.faq {
+  background-color: var(--bg-color2);
+  padding: vars.$section-padding;
+  &__box {
+    width: 100%;
+    max-width: 90rem;
+    padding: 3rem;
+    @include mixin.border($radius: true);
+  }
+}

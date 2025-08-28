@@ -1,4 +1,4 @@
-import CalculatorImc from '../Calculate.js';
+import CalculatorImc from './Calculate.js';
 
 export class ImcCalculator {
   calculate(height, weight) {

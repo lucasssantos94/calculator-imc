@@ -39,7 +39,6 @@ export class UIManager {
 
   scrollToResult() {
     this.dom.divResult.scrollIntoView({
-      behavior: 'smooth',
       block: 'center',
     });
   }

@@ -15,20 +15,7 @@
   &__container {
     @include mixin.flex($between: true);
   }
-  &__logo {
-    @include mixin.flex($align: center, $gap: 0.8rem);
-    color: var(--title-color);
-    &-icon {
-      background-color: var(--brand-color);
-      width: 3.2rem;
-      height: 3.2rem;
-      @include mixin.flex($center: true);
-      border-radius: 0.8rem;
-    }
-    &-text {
-      font-size: 1.6rem;
-    }
-  }
+
   &__nav {
     @include mixin.flex($align: center, $gap: 2.4rem);
     &-link {

@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins/mixins.scss' as mixin;
+
+.table-section__table {
+  margin-top: 2rem;
+  border-collapse: collapse;
+  width: 100%;
+  color: var(--title-color);
+  text-align: left;
+  &-thead {
+    font-size: 1.8rem;
+  }
+  &-tr {
+    @include mixin.border($side: bottom);
+  }
+  &-th {
+    font-size: 1.6rem;
+    text-align: left;
+    padding: 1.2rem;
+    font-weight: 600;
+  }
+  &-td {
+    font-size: 1.4rem;
+    padding: 1.2rem;
+  }
+}

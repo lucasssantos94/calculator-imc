@@ -22,15 +22,10 @@ $light-text-color: #52525b;
 $light-text-light-color: #fefefe;
 $light-border-color: #d1d5db;
 
-// placeholder
-%title-section {
-  font-size: 2.4rem;
-  text-align: center;
-}
-%description-section {
-  margin-top: 0.8rem;
-  font-size: 1.6rem;
-  line-height: 2.8rem;
-  color: var(--text-color);
-  text-align: center;
-}
+// badge colors
+$badge-color1: #2b7fff;
+$badge-color2: #43963c;
+$badge-color3: #f0b100;
+$badge-color4: #ff6900;
+$badge-color5: #fb2c36;
+$badge-color6: #f20024;

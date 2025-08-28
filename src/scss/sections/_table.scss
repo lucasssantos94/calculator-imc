@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins/mixins.scss' as mixin;
+
+.table-section {
+  padding: vars.$section-padding;
+  background-color: var(--bg-color2);
+  &__container {
+    @include mixin.flex($center: true, $direction: column, $gap: 2.4rem);
+    text-align: center;
+    color: var(--title-color);
+  }
+  &__box {
+    width: 100%;
+    max-width: 90rem;
+    background-color: var(--bg-color3);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mixin.border($radius: true);
+  }
+}

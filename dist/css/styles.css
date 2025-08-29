@@ -1,4 +1,51 @@
 @charset "UTF-8";
+@keyframes progress {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.zoom-in {
+  animation: zoom-in 0.5s ease-in-out;
+  -webkit-animation: zoom-in 0.5s ease-in-out;
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.zoom-out {
+  animation: zoom-out 0.5s ease-in-out;
+  -webkit-animation: zoom-out 0.5s ease-in-out;
+  background-color: red;
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -12,9 +59,7 @@ html {
 
 body {
   overflow-x: hidden;
-  font-family:
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background: var(--bg-color1);
 }
 
@@ -234,7 +279,7 @@ label {
   transition: all 0.3s ease;
 }
 .faq__accordion--summary::after {
-  content: '▼';
+  content: "▼";
   color: inherit;
   font-size: 1.4rem;
   transition: transform 0.3s ease;
@@ -247,6 +292,34 @@ label {
 .faq__accordion--content {
   font-size: 1.4rem;
   margin-top: 2rem;
+}
+
+.toast {
+  width: 100%;
+  position: relative;
+  background-color: var(--bg-color4);
+  padding: 2rem 1rem;
+  border: 0.5px solid var(--border-color);
+  border-radius: 1.4rem;
+  animation: zoom-in 0.5s ease-in;
+  -webkit-animation: zoom-in 0.5s;
+  display: none;
+}
+.toast.show-toast {
+  display: block;
+}
+.toast.zoom-out {
+  animation: zoom-out 0.5s ease-out;
+  -webkit-animation: zoom-out 0.5s;
+}
+.toast__close {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: red;
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  cursor: pointer;
 }
 
 .container {
@@ -358,8 +431,7 @@ main .container {
   padding: 4.8rem 0;
   padding-top: 0;
 }
-.calculator__form,
-.calculator__result {
+.calculator__form, .calculator__result {
   width: 100%;
   max-width: 50rem;
   padding: 3rem;
@@ -515,7 +587,7 @@ main .container {
   font-size: 1.2rem;
 }
 
-html[data-theme='dark'] {
+html[data-theme=dark] {
   --icon-theme: url(../../../public/images/light-theme.svg);
   --brand-color: #43963c;
   --bg-color1: #020202;
@@ -527,7 +599,7 @@ html[data-theme='dark'] {
   --border-color: #161616;
 }
 
-html[data-theme='light'] {
+html[data-theme=light] {
   --icon-theme: url(../../../public/images/dark-theme.svg);
   --brand-color: #43963c;
   --bg-color1: #fafafa;

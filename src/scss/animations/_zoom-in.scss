@@ -1,0 +1,15 @@
+.zoom-in {
+  animation: zoom-in 0.5s ease-in-out;
+  -webkit-animation: zoom-in 0.5s ease-in-out;
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -8,6 +8,9 @@ export class DOMElements {
     this.badge = document.getElementById('bmi-badge');
     this.resultDescription = document.getElementById('bmi-description');
     this.btnSwitchTheme = document.getElementById('switch-theme');
+    this.toast = document.getElementById('toast');
+    this.toastMessage = document.getElementById('toast-message');
+    this.toastClose = document.getElementById('toast-close');
     this.yearElement = document.getElementById('year');
   }
 

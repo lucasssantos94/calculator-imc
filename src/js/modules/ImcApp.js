@@ -3,7 +3,7 @@ import { ThemeManager } from './ThemeManager.js';
 import { ImcCalculator } from './ImcCalculator.js';
 import { UIManager } from './UIManager.js';
 import { AccordionManager } from './AccordionManager.js';
-// import CalculatorImc from './Calculate.js';
+import { Toast } from './Toast.js';
 
 export class ImcApp {
   constructor() {
@@ -12,6 +12,7 @@ export class ImcApp {
     this.imcCalculator = new ImcCalculator();
     this.uiManager = new UIManager();
     this.accordionManager = new AccordionManager();
+    this.toast = new Toast();
   }
 
   init() {
@@ -43,6 +44,10 @@ export class ImcApp {
     // Accordion functionality
     document.addEventListener('click', (event) => {
       this.accordionManager.handleAccordionClick(event);
+    });
+    // Toast close
+    this.dom.toastClose.addEventListener('click', () => {
+      this.toast.close();
     });
   }
 

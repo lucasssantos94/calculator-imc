@@ -59,6 +59,13 @@
               </p>
             </div>
 
+            <div class="toast" id="toast">
+              <p class="toast__message" id="toast-message"></p>
+              <button class="toast__close" id="toast-close" type="button">
+                <i data-lucide="x"></i>
+              </button>
+            </div>
+
             <div class="calculator__input-group">
               <label for="height" class="calculator__label">
                 <i data-lucide="ruler"></i>
@@ -66,11 +73,11 @@
               </label>
               <input
                 type="number"
+                min="0"
                 name="height"
                 id="height"
                 class="calculator__input"
                 placeholder="Ex: 170"
-                required
               />
             </div>
 
@@ -81,11 +88,11 @@
               </label>
               <input
                 type="number"
+                min="0"
                 name="weight"
                 id="weight"
                 class="calculator__input"
                 placeholder="Ex: 70"
-                required
               />
             </div>
 
@@ -358,7 +365,7 @@
 
               <details class="faq__accordion--details">
                 <summary class="faq__accordion--summary">
-                  Com que frequencia devo calcular meu IMC?
+                  Com que frequência devo calcular meu IMC?
                 </summary>
                 <p class="faq__accordion--content">
                   Para a maioria dos adultos, verificar o IMC mensal ou

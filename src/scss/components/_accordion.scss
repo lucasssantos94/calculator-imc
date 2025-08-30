@@ -1,16 +1,25 @@
 @use '../abstracts/mixins/mixins.scss' as mixin;
+@use '../animations/animations.scss' as *;
 
 .faq__accordion {
   margin-top: 2rem;
+
   &--details {
     margin-top: 2rem;
     color: var(--title-color);
+
     &[open] summary {
       &::after {
         transform: rotate(180deg);
       }
     }
+
+    &[open] .faq__accordion--content {
+      animation: fade-down 0.5s ease-in;
+      -webkit-animation: fade-down 0.5s ease-in;
+    }
   }
+
   &--summary {
     all: unset;
     width: 100%;
@@ -22,6 +31,7 @@
     cursor: pointer;
     @include mixin.border($side: bottom);
     transition: all 0.3s ease;
+
     &::after {
       content: '▼';
       color: inherit;
@@ -29,13 +39,15 @@
       transition: transform 0.3s ease;
       transform: rotate(0deg);
     }
+
     &:hover {
       color: var(--brand-color);
       font-weight: bold;
     }
   }
+
   &--content {
     font-size: 1.4rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 }

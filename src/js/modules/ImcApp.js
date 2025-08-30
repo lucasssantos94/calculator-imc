@@ -19,6 +19,7 @@ export class ImcApp {
     this.setupEventListeners();
     this.themeManager.init();
     this.uiManager.setCurrentYear();
+    this.uiManager.scrollToSection();
   }
 
   setupEventListeners() {

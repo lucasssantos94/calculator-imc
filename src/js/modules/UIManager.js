@@ -47,4 +47,17 @@ export class UIManager {
       block: 'center',
     });
   }
+
+  scrollToSection() {
+    this.dom.navLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const sectionId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(sectionId);
+        targetSection.scrollIntoView({
+          block: 'center',
+        });
+      });
+    });
+  }
 }

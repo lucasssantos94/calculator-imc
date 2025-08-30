@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as vars;
 @use '../abstracts/mixins/mixins.scss' as mixin;
+@use '../animations/animations.scss' as *;
 
 .calculator {
   padding: vars.$section-padding;
@@ -14,6 +15,7 @@
     @include mixin.flex($direction: column, $align: center, $gap: 1rem);
     @include mixin.border($radius: true);
   }
+
   &__logo {
     width: 4.8rem;
     height: 4.8rem;
@@ -22,14 +24,17 @@
     @include mixin.flex($center: true);
     border-radius: 1.4rem;
   }
+
   &__input-group {
     width: 100%;
     @include mixin.flex($direction: column, $gap: 1rem);
+
     label {
       font-size: 1.6rem;
       font-weight: bold;
       @include mixin.flex($align: center, $gap: 1rem);
     }
+
     input {
       padding: 1rem;
       font-size: 1.6rem;
@@ -41,10 +46,12 @@
       margin-bottom: 1rem;
     }
   }
+
   &__buttons {
     @include mixin.flex($gap: 1rem);
     flex-wrap: nowrap;
     width: 100%;
+
     button {
       width: 100%;
       padding: 1.4rem;
@@ -53,6 +60,7 @@
       background-color: var(--brand-color);
       border: none;
       border-radius: 0.8rem;
+
       &.btn-reset {
         color: var(--title-color);
         background-color: var(--bg-color3);
@@ -61,23 +69,30 @@
       }
     }
   }
+
   &__result {
     display: none;
+
     &-title {
       font-size: 2rem;
     }
+
     h4 {
       font-size: 4.8rem;
       margin: 1rem 0;
     }
+
     &__bmi--description {
       margin-top: 1rem;
       font-size: 1.6rem;
       text-align: center;
       max-width: 400px;
     }
+
     &.show {
       display: flex;
+      animation: fade-in 1s ease-in;
+      -webkit-animation: fade-in 1s ease-in;
     }
   }
 }

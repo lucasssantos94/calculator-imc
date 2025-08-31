@@ -2,22 +2,28 @@
 @use '../abstracts/mixins/mixins.scss' as mixin;
 
 .footer {
+  @include mixin.border($side: top);
+
   &__container {
     @include mixin.flex($between: true);
   }
+
   &__logo {
     div {
       width: 2.8rem;
       height: 2.8rem;
     }
+
     h4 {
       font-size: 1.4rem;
     }
   }
+
   &__copyright {
     font-size: 1.2rem;
     color: var(--text-color);
   }
+
   &__disclaimer {
     font-size: 1.2rem;
   }

@@ -1,23 +1,29 @@
 @use '../abstracts/variables' as vars;
 @use '../abstracts/mixins/mixins.scss' as mixin;
+@use '../animations/animations.scss' as *;
 
 .hero {
   padding-top: vars.$header-height;
+
   &__container {
     padding: vars.$section-padding;
     text-align: center;
     color: var(--title-color);
   }
+
   &__title {
-    font-size: 6rem;
+    font-size: clamp(4rem, 6vw, 6rem);
+
     &--highlight {
       color: var(--brand-color);
+      animation: fade-up 1s ease-in;
+      -webkit-animation: fade-up 1s ease-in;
     }
   }
+
   &__description {
-    margin-top: 1rem;
-    font-size: 2rem;
-    line-height: 3.4rem;
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    line-height: 170%;
     width: 100%;
     max-width: 800px;
     text-align: center;

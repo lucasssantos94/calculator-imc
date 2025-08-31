@@ -12,12 +12,14 @@
   transition: backdrop-filter 0.3s ease-in-out;
   backdrop-filter: blur(10px);
   @include mixin.border($side: bottom);
+
   &__container {
     @include mixin.flex($between: true);
   }
 
   &__nav {
     @include mixin.flex($align: center, $gap: 2.4rem);
+
     &--link {
       font-size: 1.8rem;
       line-height: 2rem;
@@ -25,9 +27,18 @@
       color: var(--title-color);
       font-weight: 500;
       transition: all 0.3s;
+
       &:hover {
         color: var(--brand-color);
       }
+    }
+
+    @include mixin.media-query('md') {
+      gap: 1rem;
+    }
+
+    @include mixin.media-query('sm') {
+      display: none;
     }
   }
 
@@ -39,13 +50,16 @@
     background-size: cover;
     background-position: center;
     border: none;
+
     &[data-tooltip] {
       position: relative;
       will-change: opacity;
+
       &::after {
         opacity: 0;
         transition: opacity 0.3s ease;
       }
+
       &:hover::after {
         content: attr(data-tooltip);
         position: absolute;

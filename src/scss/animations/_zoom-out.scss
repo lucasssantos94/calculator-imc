@@ -1,7 +1,6 @@
 .zoom-out {
   animation: zoom-out 0.5s ease-in-out;
   -webkit-animation: zoom-out 0.5s ease-in-out;
-  background-color: red;
 }
 
 @keyframes zoom-out {
@@ -9,6 +8,7 @@
     transform: scale(1);
     opacity: 1;
   }
+
   to {
     transform: scale(0);
     opacity: 0;

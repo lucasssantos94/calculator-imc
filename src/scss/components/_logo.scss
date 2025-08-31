@@ -1,7 +1,9 @@
 @use '../abstracts/mixins/mixins.scss' as mixin;
+
 .box__logo {
   @include mixin.flex($align: center, $gap: 0.8rem);
   color: var(--title-color);
+
   &--icon {
     background-color: var(--brand-color);
     width: 3.2rem;
@@ -9,6 +11,7 @@
     @include mixin.flex($center: true);
     border-radius: 0.8rem;
   }
+
   &--text {
     font-size: 1.6rem;
   }

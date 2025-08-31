@@ -7,8 +7,8 @@ export class ThemeManager {
       DARK: 'dark',
     };
     this.tooltips = {
-      [this.themes.LIGHT]: 'Tema Escuro 🧛🏻‍♂️',
-      [this.themes.DARK]: 'Tema Claro 😎',
+      [this.themes.LIGHT]: 'Tema Escuro',
+      [this.themes.DARK]: 'Tema Claro',
     };
   }
 

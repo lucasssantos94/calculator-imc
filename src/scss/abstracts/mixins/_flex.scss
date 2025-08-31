@@ -55,19 +55,19 @@
   $justify: flex-start,
   $align: stretch,
   $gap: null,
-  $wrap: nowrap,
+  $wrap: wrap,
   $center: false,
   $between: false
 ) {
   display: flex;
 
   // Só define flex-direction se for diferente do padrão
-  @if $direction and $direction != row {
+  @if $direction and $direction !=row {
     flex-direction: $direction;
   }
 
   // Só define flex-wrap se for diferente do padrão
-  @if $wrap and $wrap != nowrap {
+  @if $wrap and $wrap !=nowrap {
     flex-wrap: $wrap;
   }
 

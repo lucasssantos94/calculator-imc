@@ -25,6 +25,18 @@
   }
 
   &__disclaimer {
-    font-size: 1.2rem;
+    &--text {
+      font-size: 1.2rem;
+    }
+  }
+
+  @include mixin.media-query('md') {
+    &__container {
+      @include mixin.flex($direction: column, $align: center, $gap: 1rem);
+    }
+
+    &__disclaimer {
+      text-align: center;
+    }
   }
 }

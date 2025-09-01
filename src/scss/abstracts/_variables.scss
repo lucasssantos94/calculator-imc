@@ -1,12 +1,11 @@
-@use '../abstracts/mixins/mixins.scss' as mixin;
-
 $header-height: 7.2rem;
 $section-padding: 4.8rem 0;
 $section-padding-md: 0;
 
+// Brand Color
 $brand-color: #43963c;
 
-// colors dark mode
+// Dark Theme
 $dark-bg-color1: #020202;
 $dark-bg-color2: #040404;
 $dark-bg-color3: #060606;
@@ -15,7 +14,7 @@ $dark-title-color: #eeeeee;
 $dark-text-color: #868f8f;
 $dark-border-color: #161616;
 
-// colors light mode
+// Light Theme
 $light-bg-color1: #fafafa;
 $light-bg-color2: #f3f4f6;
 $light-bg-color3: #eaecee;
@@ -25,7 +24,7 @@ $light-text-color: #52525b;
 $light-text-light-color: #fefefe;
 $light-border-color: #d1d5db;
 
-// badge colors
+// Badges
 $badge-color1: #2b7fff;
 $badge-color2: #43963c;
 $badge-color3: #f0b100;

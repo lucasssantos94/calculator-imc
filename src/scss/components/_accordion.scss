@@ -32,6 +32,11 @@
     @include mixin.border($side: bottom);
     transition: all 0.3s ease;
 
+    @include mixin.media-query('320px') {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+
     &::after {
       content: '▼';
       color: inherit;

@@ -4,10 +4,15 @@
 .faq {
   background-color: var(--bg-color2);
   padding: vars.$section-padding;
+
   &__box {
     width: 100%;
     max-width: 90rem;
     padding: 3rem;
     @include mixin.border($radius: true);
+
+    @include mixin.media-query('sm') {
+      padding: 1.6rem;
+    }
   }
 }

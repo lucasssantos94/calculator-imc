@@ -1,5 +1,8 @@
+@use '../abstracts/mixins/mixins.scss' as mixin;
+
 $header-height: 7.2rem;
 $section-padding: 4.8rem 0;
+$section-padding-md: 0;
 
 $brand-color: #43963c;
 

@@ -6,6 +6,10 @@
   padding: vars.$section-padding;
   padding-top: 0;
 
+  @include mixin.media-query('md') {
+    padding: vars.$section-padding-md;
+  }
+
   &__form,
   &__result {
     width: 100%;

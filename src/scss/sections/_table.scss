@@ -4,10 +4,16 @@
 .table-section {
   padding: vars.$section-padding;
   background-color: var(--bg-color2);
+
+  @include mixin.media-query('md') {
+    padding: vars.$section-padding-md;
+  }
+
   &__container {
     text-align: center;
     color: var(--title-color);
   }
+
   &__box {
     width: 100%;
     max-width: 90rem;

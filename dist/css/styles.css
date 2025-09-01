@@ -1,5 +1,4 @@
-@charset "UTF-8";
-@keyframes progress {
+﻿@keyframes progress {
   0% {
     width: 100%;
   }
@@ -55,7 +54,6 @@
   animation: zoom-in 0.5s ease-in-out;
   -webkit-animation: zoom-in 0.5s ease-in-out;
 }
-
 @keyframes zoom-in {
   from {
     transform: scale(0);
@@ -70,7 +68,6 @@
   animation: zoom-out 0.5s ease-in-out;
   -webkit-animation: zoom-out 0.5s ease-in-out;
 }
-
 @keyframes zoom-out {
   from {
     transform: scale(1);
@@ -86,35 +83,31 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
-
 body {
   overflow-x: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
   background: var(--bg-color1);
 }
-
 a {
   text-decoration: none;
   color: inherit;
 }
-
 img {
   max-width: 100%;
   display: block;
 }
-
 button {
   cursor: pointer;
   border: none;
   background: none;
 }
-
 h1,
 h2,
 h3,
@@ -124,20 +117,17 @@ h6 {
   color: var(--title-color);
   font-weight: 700;
 }
-
 p {
   color: var(--text-color);
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
-
 label {
   color: var(--title-color);
   font-size: 1.6rem;
   line-height: 2.4rem;
   display: block;
 }
-
 .box__logo {
   display: flex;
   gap: 0.8rem;
@@ -157,7 +147,6 @@ label {
 .box__logo--text {
   font-size: 1.6rem;
 }
-
 .section__introduction {
   text-align: center;
 }
@@ -170,7 +159,6 @@ label {
   line-height: 2.8rem;
   color: var(--text-color);
 }
-
 .bmi-badge {
   font-size: 2rem;
   font-weight: bold;
@@ -178,7 +166,6 @@ label {
   border-radius: 0.8rem;
   color: var(--title-color);
 }
-
 .table-section__table {
   margin-top: 2rem;
   border-collapse: collapse;
@@ -237,7 +224,6 @@ label {
     width: 55%;
   }
 }
-
 .table-section__info {
   margin-top: 2rem;
   padding: 1.2rem;
@@ -249,7 +235,6 @@ label {
   color: var(--text-color);
   text-align: left;
 }
-
 .table-section__badge {
   padding: 0.5rem 0.8rem;
   border-radius: 1rem;
@@ -281,7 +266,6 @@ label {
     font-size: 1rem;
   }
 }
-
 .health-tips__card {
   padding: 2.4rem;
   border-radius: 1.4rem;
@@ -341,7 +325,6 @@ label {
     padding: 1rem;
   }
 }
-
 .faq__accordion {
   margin-top: 2rem;
 }
@@ -375,7 +358,7 @@ label {
   }
 }
 .faq__accordion--summary::after {
-  content: "▼";
+  content: '▼';
   color: inherit;
   font-size: 1.4rem;
   transition: transform 0.3s ease;
@@ -389,7 +372,6 @@ label {
   font-size: 1.4rem;
   margin-top: 1rem;
 }
-
 .toast {
   width: 100%;
   position: relative;
@@ -417,14 +399,12 @@ label {
   right: 1.5rem;
   cursor: pointer;
 }
-
 .container {
   width: 100%;
   max-width: 95vw;
   margin: 0 auto;
   padding: 2rem 2%;
 }
-
 .header {
   height: 7.2rem;
   width: 100%;
@@ -432,7 +412,7 @@ label {
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   transition: backdrop-filter 0.3s ease-in-out;
   backdrop-filter: blur(10px);
   border-bottom: 0.5px solid var(--border-color);
@@ -501,7 +481,6 @@ label {
   pointer-events: none;
   opacity: 1;
 }
-
 main .container {
   display: flex;
   flex-direction: column;
@@ -509,7 +488,6 @@ main .container {
   justify-content: center;
   align-items: center;
 }
-
 .hero {
   padding-top: 7.2rem;
 }
@@ -533,7 +511,6 @@ main .container {
   max-width: 800px;
   text-align: center;
 }
-
 .calculator {
   padding: 4.8rem 0;
   padding-top: 0;
@@ -543,7 +520,8 @@ main .container {
     padding: 0;
   }
 }
-.calculator__form, .calculator__result {
+.calculator__form,
+.calculator__result {
   width: 100%;
   max-width: 50rem;
   padding: 3rem;
@@ -604,7 +582,7 @@ main .container {
   width: 100%;
   padding: 1.4rem;
   font-size: 1.6rem;
-  color: #ffffff;
+  color: #fff;
   background-color: var(--brand-color);
   border: none;
   border-radius: 0.8rem;
@@ -636,7 +614,6 @@ main .container {
   animation: fade-in 1s ease-in;
   -webkit-animation: fade-in 1s ease-in;
 }
-
 .table-section {
   padding: 4.8rem 0;
   background-color: var(--bg-color2);
@@ -661,7 +638,6 @@ main .container {
   border: 0.5px solid var(--border-color);
   border-radius: 1.4rem;
 }
-
 .health-tips {
   padding: 4.8rem 0;
 }
@@ -673,7 +649,6 @@ main .container {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
-
 .faq {
   background-color: var(--bg-color2);
   padding: 4.8rem 0;
@@ -690,7 +665,6 @@ main .container {
     padding: 1.6rem;
   }
 }
-
 .footer {
   border-top: 0.5px solid var(--border-color);
 }
@@ -725,8 +699,7 @@ main .container {
     text-align: center;
   }
 }
-
-html[data-theme=dark] {
+html[data-theme='dark'] {
   --icon-theme: url(../../../public/images/light-theme.svg);
   --brand-color: #43963c;
   --bg-color1: #020202;
@@ -737,8 +710,7 @@ html[data-theme=dark] {
   --text-color: #868f8f;
   --border-color: #161616;
 }
-
-html[data-theme=light] {
+html[data-theme='light'] {
   --icon-theme: url(../../../public/images/dark-theme.svg);
   --brand-color: #43963c;
   --bg-color1: #fafafa;

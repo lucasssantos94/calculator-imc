@@ -5,28 +5,37 @@
   border-radius: 1.4rem;
   display: flex;
   flex-direction: column;
+  flex: 1 0 0;
   gap: 2.4rem;
   @include mixin.border($radius: true);
   border-left: 4px solid var(--brand-color);
+
   &-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include mixin.flex($between: true);
+    flex-wrap: nowrap;
   }
+
   &-title {
     display: flex;
     align-items: center;
     gap: 1rem;
+
     h3 {
       font-size: 1.8rem;
       color: var(--title-color);
+
+      @include mixin.media-query('md') {
+        font-size: 1.6rem;
+      }
     }
   }
+
   &-icon {
     width: 2rem;
     height: 2rem;
     color: var(--brand-color);
   }
+
   &-badge {
     color: var(--title-color);
     font-size: 1.2rem;

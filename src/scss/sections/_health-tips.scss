@@ -2,12 +2,13 @@
 
 .health-tips {
   padding: vars.$section-padding;
+
   &__cards {
     width: 100%;
     max-width: 90rem;
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
   }
 }

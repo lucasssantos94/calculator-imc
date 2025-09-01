@@ -95,9 +95,7 @@ html {
 
 body {
   overflow-x: hidden;
-  font-family:
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background: var(--bg-color1);
 }
 
@@ -142,7 +140,6 @@ label {
 
 .box__logo {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.8rem;
   justify-content: flex-start;
   align-items: center;
@@ -153,7 +150,6 @@ label {
   width: 3.2rem;
   height: 3.2rem;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   border-radius: 0.8rem;
@@ -201,10 +197,45 @@ label {
   text-align: left;
   padding: 1.2rem;
   font-weight: 600;
+  width: max-content;
 }
 .table-section__table-td {
+  width: max-content;
   font-size: 1.4rem;
   padding: 1.2rem;
+}
+@media screen and (width <= 992px) {
+  .table-section__table-th {
+    font-size: 1.4rem;
+  }
+  .table-section__table-td {
+    font-size: 1.2rem;
+  }
+}
+@media (width <= 690px) {
+  .table-section__table-th {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+    text-align: center;
+  }
+  .table-section__table-td {
+    font-size: 1rem;
+    padding: 0.8rem;
+    text-align: center;
+  }
+  .table-section__table-td span {
+    display: block;
+  }
+  .table-section__table-td:nth-child(2) {
+    width: 45%;
+  }
+  .table-section__table-td:nth-child(2) .table-section__badge {
+    text-align: center;
+  }
+  .table-section__table-td:nth-child(3) {
+    padding: 0.8rem;
+    width: 55%;
+  }
 }
 
 .table-section__info {
@@ -244,12 +275,19 @@ label {
 .table-section__badge--6 {
   background-color: #f20024;
 }
+@media screen and (width <= 768px) {
+  .table-section__badge {
+    padding: 0.5rem 0.4rem;
+    font-size: 1rem;
+  }
+}
 
 .health-tips__card {
   padding: 2.4rem;
   border-radius: 1.4rem;
   display: flex;
   flex-direction: column;
+  flex: 1 0 0;
   gap: 2.4rem;
   border: 0.5px solid var(--border-color);
   border-radius: 1.4rem;
@@ -257,8 +295,9 @@ label {
 }
 .health-tips__card-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 .health-tips__card-title {
   display: flex;
@@ -268,6 +307,11 @@ label {
 .health-tips__card-title h3 {
   font-size: 1.8rem;
   color: var(--title-color);
+}
+@media screen and (width <= 768px) {
+  .health-tips__card-title h3 {
+    font-size: 1.6rem;
+  }
 }
 .health-tips__card-icon {
   width: 2rem;
@@ -310,7 +354,7 @@ label {
   transition: all 0.3s ease;
 }
 .faq__accordion--summary::after {
-  content: '▼';
+  content: "▼";
   color: inherit;
   font-size: 1.4rem;
   transition: transform 0.3s ease;
@@ -374,13 +418,11 @@ label {
 }
 .header__container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 .header__nav {
   display: flex;
-  flex-wrap: wrap;
   gap: 2.4rem;
   justify-content: flex-start;
   align-items: center;
@@ -442,7 +484,6 @@ label {
 main .container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
   align-items: center;
@@ -476,15 +517,13 @@ main .container {
   padding: 4.8rem 0;
   padding-top: 0;
 }
-.calculator__form,
-.calculator__result {
+.calculator__form, .calculator__result {
   width: 100%;
   max-width: 50rem;
   padding: 3rem;
   background-color: var(--bg-color3);
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 1rem;
   justify-content: flex-start;
   align-items: center;
@@ -497,7 +536,6 @@ main .container {
   background-color: var(--bg-color4);
   color: var(--brand-color);
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   border-radius: 1.4rem;
@@ -506,7 +544,6 @@ main .container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 1rem;
   justify-content: flex-start;
   align-items: stretch;
@@ -515,7 +552,6 @@ main .container {
   font-size: 1.6rem;
   font-weight: bold;
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
   justify-content: flex-start;
   align-items: center;
@@ -532,7 +568,6 @@ main .container {
 }
 .calculator__buttons {
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
   justify-content: flex-start;
   align-items: stretch;
@@ -604,7 +639,7 @@ main .container {
   max-width: 90rem;
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
@@ -625,7 +660,6 @@ main .container {
 }
 .footer__container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -647,7 +681,6 @@ main .container {
   .footer__container {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     gap: 1rem;
     justify-content: flex-start;
     align-items: center;
@@ -657,7 +690,7 @@ main .container {
   }
 }
 
-html[data-theme='dark'] {
+html[data-theme=dark] {
   --icon-theme: url(../../../public/images/light-theme.svg);
   --brand-color: #43963c;
   --bg-color1: #020202;
@@ -669,7 +702,7 @@ html[data-theme='dark'] {
   --border-color: #161616;
 }
 
-html[data-theme='light'] {
+html[data-theme=light] {
   --icon-theme: url(../../../public/images/dark-theme.svg);
   --brand-color: #43963c;
   --bg-color1: #fafafa;

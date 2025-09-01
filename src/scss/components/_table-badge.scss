@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as vars;
+@use '../abstracts/mixins/mixins.scss' as mixin;
 
 .table-section__badge {
   padding: 0.5rem 0.8rem;
@@ -6,22 +7,33 @@
   font-size: 1.2rem;
   font-weight: bold;
   color: #fff;
+
   &--1 {
     background-color: vars.$badge-color1;
   }
+
   &--2 {
     background-color: vars.$badge-color2;
   }
+
   &--3 {
     background-color: vars.$badge-color3;
   }
+
   &--4 {
     background-color: vars.$badge-color4;
   }
+
   &--5 {
     background-color: vars.$badge-color5;
   }
+
   &--6 {
     background-color: vars.$badge-color6;
+  }
+
+  @include mixin.media-query('md') {
+    padding: 0.5rem 0.4rem;
+    font-size: 1rem;
   }
 }

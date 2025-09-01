@@ -44,4 +44,16 @@
     border-radius: 0.8rem;
     background-color: var(--bg-color4);
   }
+
+  @include mixin.media-query('md') {
+    padding: 2rem;
+  }
+
+  @include mixin.media-query('sm') {
+    padding: 1.6rem;
+  }
+
+  @include mixin.media-query('320px') {
+    padding: 1rem;
+  }
 }

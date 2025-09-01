@@ -11,7 +11,6 @@ export class DOMElements {
     this.toast = document.getElementById('toast');
     this.toastMessage = document.getElementById('toast-message');
     this.toastClose = document.getElementById('toast-close');
-    this.yearElement = document.getElementById('year');
     this.navLinks = document.querySelectorAll('.header__nav--link');
   }
 

@@ -27,10 +27,6 @@ export class UIManager {
     this.toast.show(message);
   }
 
-  setCurrentYear() {
-    this.dom.yearElement.textContent = new Date().getFullYear();
-  }
-
   fillResultFields(value, category) {
     this.dom.resultImc.innerHTML = value;
     this.dom.badge.style.backgroundColor = category.color;
